@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://do3ui1a8cytt4"]
+
+[ext_resource type="Script" path="res://overlap/hitbox.gd" id="1_qtrbg"]
+
+[node name="Hitbox" type="Area2D"]
+monitoring = false
+script = ExtResource("1_qtrbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
