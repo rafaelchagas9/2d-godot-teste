@@ -35,7 +35,8 @@ var current_health = max_health :
 		if current_health == max_health:
 			$EntityHealthBar.visible = false
 		else:
-			$EntityHealthBar.visible = true
+			if entity_type == entity_types.ENEMY:
+				$EntityHealthBar.visible = true
 			
 		$EntityHealthBar.value = current_health	
 		emit_signal("hp_changed", current_health)
@@ -92,11 +93,12 @@ func spawn_damage_indicator(damage):
 		indicator.label.text = str(damage)
 	
 func _on_hurtbox_area_entered(hitbox):
-	# Detectando o tipo de entidade que recebeu o hit
+		# Detectando o tipo de entidade que recebeu o hit
 	if entity_type == entity_types.ENEMY:
-		print(hitbox.entity_name)
+		$AnimationPlayer.play("attack")
+		is_atacando = true
 	else:
-		print(hitbox.entity_name)
+		print(entity_type)
 	var damage = receive_damage(hitbox.damage)
 	
 	

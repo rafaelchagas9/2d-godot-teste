@@ -408,6 +408,10 @@ visible = false
 offset_top = -25.0
 offset_bottom = 15.0
 
+[node name="Camera2D" type="Camera2D" parent="." index="5"]
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 50.0
+
 [connection signal="animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_animation_changed"]
 
 [editable path="Hurtbox"]

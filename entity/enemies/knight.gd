@@ -33,10 +33,10 @@ func process_movement(delta, is_on_edge):
 	var _is_running = is_on_floor() and not is_zero_approx(velocity.x)
 	var _is_idling = is_on_floor() and is_zero_approx(velocity.x)
 	
-	if _is_idling:
+	if _is_idling and not is_atacando:
 		$AnimationPlayer.play("idle")
 	
-	if velocity.x != 0:
+	if velocity.x != 0 and not is_atacando:
 		$AnimationPlayer.play("walk")
 	
 	if is_on_edge:
@@ -56,5 +56,4 @@ func process_movement(delta, is_on_edge):
 			$Sprite2D.scale.x = -1
 			velocity.x = -speed
 		
-
 	move()
