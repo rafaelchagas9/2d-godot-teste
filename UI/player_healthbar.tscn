@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cblg5lp254gx5"]
+
+[ext_resource type="Texture2D" uid="uid://dh85litnfn3lw" path="res://UI/empty.png" id="1_3medx"]
+[ext_resource type="Texture2D" uid="uid://b2x8f2vgvb82b" path="res://UI/fill.png" id="2_xwhqq"]
+
+[node name="TextureProgressBar" type="TextureProgressBar"]
+texture_filter = 1
+offset_right = 113.0
+offset_bottom = 40.0
+scale = Vector2(2.5, 2.5)
+texture_under = ExtResource("1_3medx")
+texture_progress = ExtResource("2_xwhqq")
+texture_progress_offset = Vector2(9, 2)

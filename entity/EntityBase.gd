@@ -21,6 +21,7 @@ var speed = 400
 var is_moving_left = true
 
 # Estatísticas de combate
+var attack_duration = 0
 var receives_knockback = true
 var damage = 0
 var knockack_modifier = 3
@@ -114,3 +115,9 @@ func detect_edge():
 	if not $Sprite2D/RayCast2D.is_colliding() and is_on_floor():
 		return false
 	return true
+	
+
+func detect_player():
+	if $Sprite2D/EntityDetector.is_colliding():
+		return true
+	return false

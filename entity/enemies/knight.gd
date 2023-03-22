@@ -3,8 +3,11 @@ extends "res://entity/EntityBase.gd"
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+var attack_timer = 0
+
 func _ready():
 	animation_death_duration = 1.2
+	attack_duration = 1.15
 	entity_type = entity_types.ENEMY
 	speed = 80
 	velocity.x = speed
@@ -14,6 +17,17 @@ func _ready():
 	
 func _physics_process(delta):
 	if not dead:
+		if detect_player():
+			is_atacando = true
+			$AnimationPlayer.play("attack")
+			attack_timer = 0
+			
+		if is_atacando:
+			attack_timer += delta
+			
+		if attack_timer > attack_duration:
+			is_atacando = false
+			
 		var is_on_edge: bool = detect_edge()
 		process_movement(delta, !is_on_edge)
 

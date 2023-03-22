@@ -6,6 +6,8 @@ func _ready():
 	knockack_modifier = 20
 	entity_type = entity_types.PLAYER
 	damage = 20
+	$CanvasGroup/HUD/TextureProgressBar.max_value = max_health
+	$CanvasGroup/HUD/TextureProgressBar.value = current_health
 	$Sprite2D/Hitbox.damage = damage
 
 
@@ -88,3 +90,6 @@ func _attack(delta):
 			cooldown_ataque = 0
 			is_atacando = true
 
+
+func _on_hp_changed(new_hp):
+	$CanvasGroup/HUD/TextureProgressBar.value = new_hp
