@@ -13,7 +13,7 @@ var is_atacando = false
 var cooldown_ataque = 0
 var _jump_count = 0
 var is_jumping = false
-var maximum_jumps = 5
+@export var maximum_jumps = 5
 var jump_strength = 800.0
 var multi_jump_strength = 500
 var dead = false
@@ -23,9 +23,9 @@ var is_moving_left = true
 # Estatísticas de combate
 var attack_duration = 0
 var receives_knockback = true
-var damage = 0
+@export var damage = 0
 var knockack_modifier = 3
-var defense = 2
+@export var defense = 2
 var max_health = 100:
 	set(value):
 		max_health = value
@@ -100,6 +100,9 @@ func _on_hurtbox_area_entered(hitbox):
 		is_atacando = true
 	else:
 		print(entity_type)
+		
+	if hitbox.is_in_group("Projectile"):
+		hitbox.destroy()
 	var damage = receive_damage(hitbox.damage)
 	
 	

@@ -1,0 +1,238 @@
+[gd_scene load_steps=31 format=3 uid="uid://s7ardcrjws8r"]
+
+[ext_resource type="PackedScene" uid="uid://do3ui1a8cytt4" path="res://overlap/hitbox.tscn" id="1_o1rg3"]
+[ext_resource type="Texture2D" uid="uid://duu4q5pxngw0u" path="res://Imports/GothicVania/magic/fire-missile/sprites/fire-missile1.png" id="2_6qq6b"]
+[ext_resource type="Script" path="res://Spells/Fireball.gd" id="2_d1qx0"]
+[ext_resource type="Texture2D" uid="uid://dqlit1e8h14h5" path="res://Imports/GothicVania/magic/fire-missile/sprites/fire-missile2.png" id="3_7wim8"]
+[ext_resource type="Texture2D" uid="uid://bimemjbi4qjvc" path="res://Imports/GothicVania/magic/fire-missile/sprites/fire-missile3.png" id="4_g4b52"]
+[ext_resource type="Texture2D" uid="uid://b6q7ptyiv0row" path="res://Imports/GothicVania/magic/fire-missile/sprites/fire-missile4.png" id="5_tt0ed"]
+[ext_resource type="Texture2D" uid="uid://lw88rbr2uxor" path="res://Imports/GothicVania/magic/fire-missile/sprites/fire-missile5.png" id="6_j7w4g"]
+[ext_resource type="Texture2D" uid="uid://smlphseebbri" path="res://Imports/GothicVania/magic/fireball/sprites/fireball1.png" id="8_haun4"]
+[ext_resource type="Texture2D" uid="uid://t6c6ffct1k6o" path="res://Imports/GothicVania/magic/fireball/sprites/fireball2.png" id="9_l3j1n"]
+[ext_resource type="Texture2D" uid="uid://bbe8hpkkmacej" path="res://Imports/GothicVania/magic/fireball/sprites/fireball3.png" id="10_lhnhe"]
+[ext_resource type="Texture2D" uid="uid://eqf66e68rrff" path="res://Imports/GothicVania/magic/fireball/sprites/fireball4.png" id="11_hh43j"]
+[ext_resource type="Texture2D" uid="uid://drj1h6tyqmchb" path="res://Imports/GothicVania/magic/fireball/sprites/fireball5.png" id="12_5m253"]
+[ext_resource type="Texture2D" uid="uid://mqyet31dwdu6" path="res://Imports/GothicVania/magic/fireball/sprites/fireball6.png" id="13_26kwx"]
+[ext_resource type="Texture2D" uid="uid://wru8u7ckbskk" path="res://Imports/GothicVania/magic/fireball/sprites/fireball7.png" id="14_vi3kq"]
+[ext_resource type="Texture2D" uid="uid://b84qf148g5pee" path="res://Imports/GothicVania/magic/fireball/sprites/fireball8.png" id="15_yibio"]
+[ext_resource type="Texture2D" uid="uid://o0xyuuen2fbg" path="res://Imports/GothicVania/magic/fireball/sprites/fireball9.png" id="16_tp78m"]
+[ext_resource type="Texture2D" uid="uid://bvgn3c84tocrj" path="res://Imports/GothicVania/magic/fireball/sprites/fireball10.png" id="17_lfcyb"]
+[ext_resource type="Texture2D" uid="uid://bf7lob8l4mvp5" path="res://Imports/GothicVania/magic/fireball/sprites/fireball11.png" id="18_vo1n3"]
+[ext_resource type="Texture2D" uid="uid://bc7h0ivs6h0gq" path="res://Imports/GothicVania/magic/fireball/sprites/fireball12.png" id="19_hjxq2"]
+[ext_resource type="Texture2D" uid="uid://dbh618wbjysl0" path="res://Imports/GothicVania/magic/fireball/sprites/fireball13.png" id="20_d72p2"]
+[ext_resource type="Texture2D" uid="uid://dce0gaf0jm1wo" path="res://Imports/GothicVania/magic/fireball/sprites/fireball14.png" id="21_fkgxj"]
+[ext_resource type="Texture2D" uid="uid://lxhrclt4mw2b" path="res://Imports/GothicVania/magic/fireball/sprites/fireball15.png" id="22_pv31d"]
+[ext_resource type="Texture2D" uid="uid://sxh1ik7877b4" path="res://Imports/GothicVania/magic/fireball/sprites/fireball16.png" id="23_ft4ww"]
+[ext_resource type="Texture2D" uid="uid://jkvnqx70tofj" path="res://Imports/GothicVania/magic/fireball/sprites/fireball17.png" id="24_2dnmf"]
+[ext_resource type="Texture2D" uid="uid://cxt764tpfotxn" path="res://Imports/GothicVania/magic/fireball/sprites/fireball18.png" id="25_vdw54"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sv4rt"]
+radius = 19.0
+height = 42.0
+
+[sub_resource type="Animation" id="Animation_16rkr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_6qq6b")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:shape:radius")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [19.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:shape:height")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [42.0]
+}
+
+[sub_resource type="Animation" id="Animation_c4sv4"]
+resource_name = "default"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_6qq6b"), ExtResource("3_7wim8"), ExtResource("4_g4b52"), ExtResource("5_tt0ed"), ExtResource("6_j7w4g")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_8m0g2"]
+resource_name = "explode"
+length = 0.72
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_haun4"), ExtResource("9_l3j1n"), ExtResource("10_lhnhe"), ExtResource("11_hh43j"), ExtResource("12_5m253"), ExtResource("13_26kwx"), ExtResource("14_vi3kq"), ExtResource("15_yibio"), ExtResource("16_tp78m"), ExtResource("17_lfcyb"), ExtResource("18_vo1n3"), ExtResource("19_hjxq2"), ExtResource("20_d72p2"), ExtResource("21_fkgxj"), ExtResource("22_pv31d"), ExtResource("23_ft4ww"), ExtResource("24_2dnmf"), ExtResource("25_vdw54")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.24),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.24),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:shape:radius")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.24, 0.52),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [10.0, 19.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:shape:height")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.24, 0.52),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [22.0, 42.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lyvq6"]
+_data = {
+"RESET": SubResource("Animation_16rkr"),
+"default": SubResource("Animation_c4sv4"),
+"explode": SubResource("Animation_8m0g2")
+}
+
+[node name="Fireball" groups=["Projectile"] instance=ExtResource("1_o1rg3")]
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("2_d1qx0")
+SPEED = 300
+damage = 4
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -1)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_sv4rt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_6qq6b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_lyvq6")
+}
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." index="3"]
+
+[node name="DestroyTimer" type="Timer" parent="." index="4"]
+wait_time = 0.72
+one_shot = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="timeout" from="DestroyTimer" to="." method="_on_destroy_timer_timeout"]

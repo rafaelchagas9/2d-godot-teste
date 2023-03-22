@@ -11,8 +11,9 @@ func _ready():
 	entity_type = entity_types.ENEMY
 	speed = 80
 	velocity.x = speed
-	damage = 10
-	max_health = 100
+	damage = 30
+	max_health = 500
+	current_health = max_health
 	$Sprite2D/Hitbox.damage = damage	
 	
 func _physics_process(delta):

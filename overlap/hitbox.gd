@@ -1,6 +1,6 @@
 extends Area2D
 
-var damage = 0
+@export var damage = 0
 var entity_name = ""
 
 # Called when the node enters the scene tree for the first time.

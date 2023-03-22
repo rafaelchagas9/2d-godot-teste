@@ -259,8 +259,9 @@ _data = {
 }
 
 [node name="CharacterBody2D" instance=ExtResource("1_wetnl")]
+scale = Vector2(2, 2)
 collision_layer = 4
-collision_mask = 7
+collision_mask = 15
 script = ExtResource("2_aogbw")
 
 [node name="CollisionShape2D" parent="." index="0"]
@@ -284,7 +285,7 @@ hframes = 22
 frame = 1
 
 [node name="RayCast2D" parent="Sprite2D" index="0"]
-position = Vector2(31, -25)
+position = Vector2(14, -16.5)
 
 [node name="Hitbox" parent="Sprite2D" index="1"]
 position = Vector2(23, -1)
@@ -313,6 +314,21 @@ offset_left = -16.0
 offset_top = -27.0
 offset_right = 24.0
 offset_bottom = 13.0
+
+[node name="CanvasGroup" parent="." index="5"]
+visible = false
+
+[node name="HUD" parent="CanvasGroup" index="0"]
+visible = false
+
+[node name="Item1" parent="CanvasGroup/HUD" index="0"]
+visible = false
+
+[node name="Item2" parent="CanvasGroup/HUD" index="1"]
+visible = false
+
+[node name="TextureProgressBar" parent="CanvasGroup/HUD" index="2"]
+visible = false
 
 [editable path="Hurtbox"]
 [editable path="Sprite2D/Hitbox"]
