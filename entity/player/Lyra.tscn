@@ -533,6 +533,8 @@ offset_top = -25.0
 offset_bottom = 15.0
 
 [node name="Camera2D" type="Camera2D" parent="." index="5"]
+position = Vector2(0, -50)
+position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 rotation_smoothing_speed = 50.0
 

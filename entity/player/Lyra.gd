@@ -107,7 +107,7 @@ func _attack(delta):
 			speed = 400			
 			is_atacando = false
 			
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+	if Input.is_action_just_pressed("attack"):
 		print("attack")
 		
 		if not is_atacando:
